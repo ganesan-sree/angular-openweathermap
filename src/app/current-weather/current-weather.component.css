@@ -1,0 +1,24 @@
+mat-grid-tile.weather.city {
+    font-weight: 600;
+    font-size: 2em;
+}
+
+mat-grid-tile.weather.description {
+    font-weight: 400;
+    font-size: 2em;
+} 
+
+mat-grid-tile.weather.values {
+    font-weight: 700;
+    font-size: 3em;
+}
+
+mat-grid-tile.weather.values.title {
+    font-weight: 200;
+    font-size: 1em;
+} 
+
+mat-grid-tile > img.weather.icon {
+    width: 20%;
+    height: 20%;
+} 

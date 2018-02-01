@@ -1,0 +1,11 @@
+<div>
+    <mat-grid-list cols="3" rowHeight="50px">
+        <mat-grid-tile class="weather city" colspan="1" rowspan="1">{{ weather?.city }}</mat-grid-tile>
+        <mat-grid-tile class="weather description" colspan="2" rowspan="1"><img class="weather icon" src="{{ weather?.icon | weatherIcon }}"> {{ weather?.main }} ({{ weather?.description }})</mat-grid-tile>
+        <mat-grid-tile rowHeight="100px" class="weather values title" colspan="1" rowspan="2">Temperature</mat-grid-tile>
+        <mat-grid-tile class="weather values title" colspan="2" rowspan="2">Cloudiness</mat-grid-tile>
+        <mat-grid-tile class="weather values" colspan="1" rowspan="2">{{ weather?.temperature | celsius }}</mat-grid-tile>
+        <mat-grid-tile class="weather values" colspan="2" rowspan="2">{{ weather?.clouds | percent }}</mat-grid-tile>   
+    </mat-grid-list>
+    <button mat-raised-button color="primary" (click)="loadWeather()">Refresh</button>
+</div>
