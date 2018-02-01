@@ -7,7 +7,7 @@ import { config } from '../config';
 export class WeatherIconPipe implements PipeTransform {
 
   transform(value: string): string {
-    return config.iconUrl.replace('{i}', value);
+    return value ? config.iconUrl.replace('{i}', value) : config.iconUrl.replace('{i}', '01d');
   }
 
 }
